@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="EasyGo.ViewProductsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="Auto" Height="Auto">
+    <Grid>
+        <TextBlock Text="Products" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
+        <ListBox x:Name="ProductsListBox" Margin="10" VerticalAlignment="Center">
+            <!-- Sample products -->
+            <ListBoxItem Content="Mountain Bike"/>
+            <ListBoxItem Content="Road Bike"/>
+            <ListBoxItem Content="Hybrid Bike"/>
+        </ListBox>
+    </Grid>
+</UserControl>
+

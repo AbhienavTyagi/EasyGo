@@ -1,0 +1,22 @@
+﻿<Window x:Class="EasyGo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EasyGo" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <MenuItem Header="Home" Click="HomeMenuItem_Click"/>
+            <MenuItem Header="About Us" Click="AboutUsMenuItem_Click"/>
+            <MenuItem Header="Login" Click="LoginMenuItem_Click"/>
+            <MenuItem Header="Sign Up" Click="SignUpMenuItem_Click"/>
+            <MenuItem Header="View Products" Click="ViewProductsMenuItem_Click"/>
+        </Menu>
+
+        <ContentControl x:Name="MainContent" Grid.Row="1"/>
+    </Grid>
+</Window>
+
