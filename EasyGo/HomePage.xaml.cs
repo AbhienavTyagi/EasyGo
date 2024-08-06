@@ -20,6 +20,7 @@ namespace EasyGo
         public HomePage()
         {
             InitializeComponent();
+
         }
 
         private void ShopNowButton_Click(object sender, RoutedEventArgs e)

@@ -14,6 +14,9 @@ namespace EasyGo
 {
     public class LoginViewModel : INotifyPropertyChanged
     {
+       // public event PropertyChangedEventHandler PropertyChanged;
+        public event Action LoginSuccessful; // Event to notify login success
+
         private string _username;
         private string _password;
         private string _message;
@@ -55,7 +58,7 @@ namespace EasyGo
             LoginCommand = new RelayCommand(ExecuteLogin);
         }
 
-        private void ExecuteLogin()
+        private void ExecuteLogin(object parameter)
         {
             if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
@@ -69,6 +72,7 @@ namespace EasyGo
             {
                 Message = "Login successful!";
                 // Navigate to the home page or any other page
+                LoginSuccessful?.Invoke(); // Trigger the event
             }
             else
             {
@@ -84,4 +88,3 @@ namespace EasyGo
         }
     }
 }
-

@@ -5,7 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
-        
+        <local:ViewModelLocator x:Key="Locator"/>
     </Application.Resources>
 </Application>
 

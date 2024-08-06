@@ -69,8 +69,15 @@
       <DependentUpon>AboutUsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="BooleanToVisibilityConverter.cs" />
+    <Compile Include="ContactUsPageViewModel.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DataService.cs" />
+    <Compile Include="ContactUsPage.xaml.cs">
+      <DependentUpon>ContactUsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetailsPage.xaml.cs">
+      <DependentUpon>ProductDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -78,7 +85,24 @@
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginViewModel.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408020915086_InitialCreate.cs" />
+    <Compile Include="Migrations\202408020915086_InitialCreate.Designer.cs">
+      <DependentUpon>202408020915086_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408031849539_InitialCreate1.cs" />
+    <Compile Include="Migrations\202408031849539_InitialCreate1.Designer.cs">
+      <DependentUpon>202408031849539_InitialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408052252360_InitialCreate2.cs" />
+    <Compile Include="Migrations\202408052252360_InitialCreate2.Designer.cs">
+      <DependentUpon>202408052252360_InitialCreate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductRepository.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
@@ -87,15 +111,21 @@
     <Compile Include="StringToVisibilityConverter.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserRepository.cs" />
+    <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewProductsPage.xaml.cs">
       <DependentUpon>ViewProductsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="AboutUsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContactUsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProductDetailsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
@@ -105,27 +135,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ViewProductsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +166,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202408020915086_InitialCreate.resx">
+      <DependentUpon>202408020915086_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408031849539_InitialCreate1.resx">
+      <DependentUpon>202408031849539_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408052252360_InitialCreate2.resx">
+      <DependentUpon>202408052252360_InitialCreate2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -156,6 +187,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\testimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner_image.jpg" />
+    <Resource Include="Images\pic1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bike1.jpg" />
+    <Resource Include="Images\bike2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bgimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\b1.jpg" />
+    <Resource Include="Images\bgimage1.jpg" />
+    <Resource Include="Images\bgimage2.jpg" />
+    <Resource Include="Images\loginbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aboutbanner.jpg" />
+    <Resource Include="Images\aboutbanner1.jpg" />
+    <Resource Include="Images\bike3.jpg" />
+    <Resource Include="Images\bike4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aboutbanner2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

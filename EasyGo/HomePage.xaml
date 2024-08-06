@@ -5,47 +5,109 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Width="Auto" Height="Auto">
-    <Grid>
-        <!-- Main Layout -->
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <!-- Main Layout -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-        <!-- Header -->
-        <Border Background="#FF4CAF50" Padding="10" Grid.Row="0">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="EasyGo Bikes" FontSize="36" FontWeight="Bold" Foreground="White"/>
-                <Button Content="Shop Now" HorizontalAlignment="Right" Margin="10" Click="ShopNowButton_Click"/>
+            <!-- Header -->
+            <Border Background="#FF4CAF50" Padding="10" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="EasyGo Bikes" FontSize="36" FontWeight="Bold" Foreground="White"/>
+                    <Button Content="Shop Now" HorizontalAlignment="Right" Margin="10" Padding="10 10 10 10" FontSize="20" Background="Black" Foreground="White" Click="ShopNowButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <Image Source="Images/banner1.jpg" Width="1060" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="0,0,0,4" />
+            <!-- Adjust height as needed -->
+
+            <!-- Featured Products -->
+            <StackPanel Grid.Row="2" Grid.Column="0" Width="1000">
+                <TextBlock Grid.Row="2" Text="Featured Products" FontSize="28" FontWeight="Bold"/>
+                <WrapPanel>
+                    <!-- Add more products as needed -->
+                    <!-- Product 1 -->
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220" >
+                        <StackPanel>
+                            <Image Source="Images/bike1.jpg" Stretch="Fill" Height="150" RenderTransformOrigin="0.492,1.44"/>
+                            <TextBlock Text="Mountain Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$499.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <!-- Product 2 -->
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike2.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike3.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike4.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike5.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike6.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike7.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
+                        <StackPanel>
+                            <Image Source="Images/bike8.jpg" Stretch="Fill" Height="150"/>
+                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+
+
             </StackPanel>
-        </Border>
 
-        <!-- Featured Products -->
-        <StackPanel Grid.Row="1" Margin="10">
-            <TextBlock Text="Featured Products" FontSize="28" FontWeight="Bold" Margin="0,0,0,10"/>
-            <WrapPanel>
-                <!-- Product 1 -->
-                <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="200" Height="200">
-                    <StackPanel>
-                        <Image Source="Images/Bike1.jpg" Stretch="Fill" Height="150"/>
-                        <TextBlock Text="Mountain Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                        <TextBlock Text="$499.99" FontSize="14" HorizontalAlignment="Center"/>
-                        <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
-                    </StackPanel>
-                </Border>
-                <!-- Product 2 -->
-                <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="200" Height="200">
-                    <StackPanel>
-                        <Image Source="Images/Bike2.jpg" Stretch="Fill" Height="150"/>
-                        <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                        <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                        <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
-                    </StackPanel>
-                </Border>
-                <!-- Add more products as needed -->
-            </WrapPanel>
-        </StackPanel>
-    </Grid>
+            <!-- Footer Section -->
+            <Border Grid.Row="3" Background="DarkGray" Padding="10">
+                <TextBlock Text="© 2024 EasyGo. All rights reserved." Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+        </Grid>
+    </ScrollViewer>
 </UserControl>
 
 

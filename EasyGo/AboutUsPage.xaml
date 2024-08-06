@@ -2,9 +2,49 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Width="Auto" Height="Auto">
-    <Grid>
-        <TextBlock Text="About Us" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10"/>
-        <TextBlock Text="We are EasyGo, providing the best bikes for your needs!" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Margin="10"/>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+
+        <Grid>
+           
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Image Source="images/aboutbanner2.jpg" Stretch="Fill" Grid.Row="0" Margin="0,0,0,0"/>
+          <TextBlock Text="About Us" TextAlignment="Right" FontWeight="Medium" Padding="10" FontSize="46" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 150 0"/>
+
+            <TextBlock Text="Who We Are" Grid.Row="1" Width="1300" TextAlignment="Center" FontFamily="Aptos" Foreground="White" Background="Black" Padding="10" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0"/>
+            <TextBlock Grid.Row="2" Text="Welcome to EasyBike, your one-stop destination for all things cycling. Whether you’re a seasoned cyclist or a beginner looking to start your biking journey, we’re here to provide you with the best products and services to make every ride enjoyable and memorable." 
+                       FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,10,10,10" Width="800"/>
+
+            <TextBlock Grid.Row="3" Text="Who We Are" FontSize="20" FontWeight="Heavy" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="800"/>
+            <TextBlock Grid.Row="4" Text="EasyBike was founded with a passion for cycling and a mission to make high-quality bikes and accessories accessible to everyone. Over the years, we have grown from a small local shop to a well-known online retailer, trusted by thousands of customers worldwide." 
+                       FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,10,10,10" Width="800"/>
+
+            <TextBlock Grid.Row="5" Text="Our Commitment" FontSize="20" FontWeight="Heavy" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="800"/>
+            <TextBlock Grid.Row="6" Text="At EasyBike, we are committed to offering top-notch customer service and the latest products from leading brands in the industry. Our team of experts is always ready to help you find the perfect bike, whether it’s for commuting, mountain biking, road racing, or leisurely rides." 
+           FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,10,10,10" Width="800"/>
+
+            <TextBlock Grid.Row="7" Text="Quality Products" FontSize="20" FontWeight="Heavy" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="800"/>
+            <TextBlock Grid.Row="8" Text="We believe in the power of cycling to transform lives, which is why we only stock products that meet our high standards of quality and performance. From durable mountain bikes and sleek road bikes to comfortable city bikes and versatile e-bikes, our selection caters to all types of riders." 
+           FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,10,10,10" Width="800"/>
+
+            <TextBlock Grid.Row="9" Text="Our Vision" FontSize="20" FontWeight="Heavy" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap" Width="800"/>
+            <TextBlock Grid.Row="10" Text="Our vision is to become the leading cycling retailer by continuing to innovate and adapt to the needs of our customers. We aim to inspire more people to discover the joys of cycling and to provide them with the tools and knowledge they need to ride with confidence." 
+           FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="Wrap"  Margin="10,10,10,10" Width="800"/>
+
+        </Grid>
+    </ScrollViewer>
+
 </UserControl>
 

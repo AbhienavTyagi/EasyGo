@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-
 namespace EasyGo
 {
     public static class UserRepository
@@ -18,7 +17,7 @@ namespace EasyGo
             }
         }
 
-        public static bool RegisterUser(string username, string password)
+        public static bool RegisterUser(string username, string password, string firstName, string lastName, string city, string postalCode, string mobileNumber)
         {
             using (var context = new ApplicationDbContext())
             {
@@ -30,7 +29,16 @@ namespace EasyGo
                 }
 
                 // Add new user
-                var newUser = new User { Username = username, Password = password };
+                var newUser = new User
+                {
+                    Username = username,
+                    Password = password,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    City = city,
+                    PostalCode = postalCode,
+                    MobileNumber = mobileNumber
+                };
                 context.Users.Add(newUser);
                 context.SaveChanges();
                 return true; // Registration successful

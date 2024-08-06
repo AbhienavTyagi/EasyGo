@@ -10,14 +10,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 
 namespace EasyGo
 {
     public partial class MainWindow : Window
     {
+        private LoginViewModel loginViewModel;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,13 +25,29 @@ namespace EasyGo
 
         public void ShowHomePage()
         {
-            MainContent.Content = new HomePage();
+            MainContent.Navigate(new HomePage());
         }
 
         public void ShowLoginPage()
         {
-            MainContent.Content = new LoginPage();
+            var loginPage = new LoginPage();
+            loginViewModel = loginPage.DataContext as LoginViewModel;
+            if (loginViewModel != null)
+            {
+                loginViewModel.LoginSuccessful += OnLoginSuccessful;
+            }
+            MainContent.Content = loginPage;
         }
+
+        private void OnLoginSuccessful()
+        {
+            ShowHomePage();
+        }
+
+        // public void ShowLoginPage()
+        //{
+        //    MainContent.Navigate(new LoginPage());
+        //}
 
         private void HomeMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -41,7 +56,7 @@ namespace EasyGo
 
         private void AboutUsMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new AboutUsPage();
+            MainContent.Navigate(new AboutUsPage());
         }
 
         private void LoginMenuItem_Click(object sender, RoutedEventArgs e)
@@ -51,12 +66,22 @@ namespace EasyGo
 
         private void SignUpMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new SignUpPage();
+            MainContent.Navigate(new SignUpPage());
         }
 
         private void ViewProductsMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new ViewProductsPage();
+            MainContent.Navigate(new ViewProductsPage());
+        }
+
+        private void ContactUsMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(new ContactUsPage());
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
