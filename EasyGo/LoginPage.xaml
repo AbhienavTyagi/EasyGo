@@ -7,12 +7,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/loginbg.jpg" />
         </Grid.Background>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
-            <TextBlock Text="Login" FontSize="24" Margin="0,0,0,10"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="350">
+            <TextBlock Text="Login" FontSize="24" FontWeight="Bold" Margin="0,0,0,10"/>
 
             <!-- Username TextBox with Watermark -->
             <Grid>
-                <TextBox x:Name="UsernameTextBox" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Width="300" FontSize="20" Margin="0,0,0,10" Padding="0,0,20,10" GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"/>
+                <TextBox x:Name="UsernameTextBox" Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Width="350" FontSize="20" Margin="0,0,0,10" Padding="0,0,20,10" GotFocus="UsernameTextBox_GotFocus" LostFocus="UsernameTextBox_LostFocus"/>
                 <TextBlock Text="Username" IsHitTestVisible="False" 
                            VerticalAlignment="Center" 
                            Margin="5,0,0,0"
@@ -22,7 +22,7 @@
 
             <!-- Password PasswordBox with Watermark -->
             <Grid>
-                <PasswordBox x:Name="PasswordBox" Width="300" Margin="0,0,0,10" Padding="0,10,20,10" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
+                <PasswordBox x:Name="PasswordBox" Width="350" Margin="0,0,0,10" Padding="0,10,20,10" GotFocus="PasswordBox_GotFocus" LostFocus="PasswordBox_LostFocus"/>
                 <TextBlock Text="Password" IsHitTestVisible="False" 
                            VerticalAlignment="Center" 
                            Margin="5,0,0,0"
@@ -30,7 +30,7 @@
                            x:Name="PasswordPlaceholder" />
             </Grid>
 
-            <Button Content="Login" Width="300" Background="Black" Foreground="White" Padding="10 5 10 5" FontSize="18" BorderBrush="Black" Command="{Binding LoginCommand}" Click="LoginButton_Click"/>
+            <Button Content="Login" Width="350" Background="Black" Foreground="White" Padding="10 5 10 5" FontSize="18" BorderBrush="Black" Command="{Binding LoginCommand}" Click="LoginButton_Click"/>
             <TextBlock Text="{Binding Message}" Foreground="Red" FontSize="16" Margin="0,10,0,0"/>
         </StackPanel>
     </Grid>

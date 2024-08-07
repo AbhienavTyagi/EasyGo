@@ -11,8 +11,8 @@ namespace EasyGo
 		{
 			products = new List<Product>
 			{
-				new Product { Id = 1, Name = "Mountain Bike", ImageUrl = "Images/bike1.jpg", Price = 499.99m, Description = "A high-quality mountain bike." },
-				new Product { Id = 2, Name = "Road Bike", ImageUrl = "Images/bike2.jpg", Price = 399.99m, Description = "A fast and light road bike." }
+				//new Product { Id = 1, Name = "Mountain Bike", ImageUrl = "Images/bike1.jpg", Price = 499.99m, Description = "A high-quality mountain bike." },
+				//new Product { Id = 2, Name = "Road Bike", ImageUrl = "Images/bike2.jpg", Price = 399.99m, Description = "A fast and light road bike." }
                 // Add more products here
             };
 		}

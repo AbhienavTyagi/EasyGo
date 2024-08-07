@@ -8,7 +8,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="Images/bgimage.jpg" />
         </Grid.Background>
-        <StackPanel Margin="100" Width="450">
+        <StackPanel Margin="0 140 0 0" Width="450">
+            <TextBlock Text="Create Account" FontSize="24" TextAlignment="Center" Foreground="Black" FontWeight="Bold" Margin="0,0,0,10"/>
+
             <!-- Username Field -->
             <Grid Margin="0,5">
                 <Grid.ColumnDefinitions>

@@ -220,6 +220,16 @@
   <ItemGroup>
     <Resource Include="Images\aboutbanner2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bike5.jpg" />
+    <Resource Include="Images\bike6.png" />
+    <Resource Include="Images\bike7.jpg" />
+    <Resource Include="Images\bike8.jpg" />
+    <Resource Include="Images\bike9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bike6.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

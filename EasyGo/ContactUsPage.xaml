@@ -8,11 +8,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+
         </Grid.RowDefinitions>
 
         <!-- Page Header -->
         <StackPanel Grid.Row="0" Background="DarkSlateGray">
-            <TextBlock Text="Contact Us" FontSize="32" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="Contact Us" FontSize="32" Padding="10" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
         </StackPanel>
 
         <!-- Contact Form -->

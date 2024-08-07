@@ -27,7 +27,7 @@
             <!-- Adjust height as needed -->
 
             <!-- Featured Products -->
-            <StackPanel Grid.Row="2" Grid.Column="0" Width="1000">
+            <StackPanel Grid.Row="2" Grid.Column="0" Width="1000" Margin="10">
                 <TextBlock Grid.Row="2" Text="Featured Products" FontSize="28" FontWeight="Bold"/>
                 <WrapPanel>
                     <!-- Add more products as needed -->
@@ -37,7 +37,7 @@
                             <Image Source="Images/bike1.jpg" Stretch="Fill" Height="150" RenderTransformOrigin="0.492,1.44"/>
                             <TextBlock Text="Mountain Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
                             <TextBlock Text="$499.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <!-- Product 2 -->
@@ -46,65 +46,64 @@
                             <Image Source="Images/bike2.jpg" Stretch="Fill" Height="150"/>
                             <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
                             <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike3.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <TextBlock Text="Haibike Alltrack" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$499.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike4.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <TextBlock Text="Cube Reaction Hybrid" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$599.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike5.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <TextBlock Text="Lapierre OVERVOLT " FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$350.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike6.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <TextBlock Text="Cannondale Trail" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$499.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike7.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="EBCO" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
                             <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                     <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Width="220">
                         <StackPanel>
                             <Image Source="Images/bike8.jpg" Stretch="Fill" Height="150"/>
-                            <TextBlock Text="Road Bike" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
-                            <TextBlock Text="$399.99" FontSize="14" HorizontalAlignment="Center"/>
-                            <Button Content="View Details" Margin="5" Click="ViewDetailsButton_Click"/>
+                            <TextBlock Text="Estarli" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock Text="$899.99" FontSize="14" HorizontalAlignment="Center"/>
+                            <Button Content="View Details" Background="Black" Foreground='White' Padding="5" FontSize="15" Margin="5" Click="ViewDetailsButton_Click"/>
                         </StackPanel>
                     </Border>
                 </WrapPanel>
-
 
             </StackPanel>
 
             <!-- Footer Section -->
             <Border Grid.Row="3" Background="DarkGray" Padding="10">
-                <TextBlock Text="© 2024 EasyGo. All rights reserved." Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="© 2024 EasyGo Bikes. All rights reserved." FontSize="20" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Border>
         </Grid>
     </ScrollViewer>
