@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using System.Data.SqlClient;
 
 
 namespace EasyGo
@@ -106,8 +107,11 @@ namespace EasyGo
 
         public SignUpViewModel()
         {
-            SignUpCommand = new RelayCommand(ExecuteSignUp);
+            //SignUpCommand = new RelayCommand(ExecuteSignUp);
         }
+
+        
+
 
         public void ExecuteSignUp(object parameter)
         {
@@ -123,7 +127,7 @@ namespace EasyGo
                 return;
             }
 
-            var userRegistered = UserRepository.RegisterUser(Username, Password, FirstName, LastName, City, PostalCode, MobileNumber);
+            bool userRegistered = UserRepository.RegisterUser(Username, Password, FirstName, LastName, City, PostalCode, MobileNumber);
 
             if (userRegistered)
             {

@@ -83,6 +83,11 @@ namespace EasyGo
         {
 
         }
+
+        public void NavigateToPage(Page page)
+        {
+            this.Content = page;
+        }
     }
 }
 

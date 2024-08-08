@@ -48,6 +48,9 @@ using System.Windows.Input;
 
 namespace EasyGo
 {
+    using System;
+    using System.Windows.Input;
+
     public class RelayCommand : ICommand
     {
         private readonly Action<object> _execute;
@@ -75,5 +78,6 @@ namespace EasyGo
             remove { CommandManager.RequerySuggested -= value; }
         }
     }
+
 }
 
